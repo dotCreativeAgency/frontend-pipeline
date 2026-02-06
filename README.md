@@ -52,17 +52,26 @@ This plugin works best with the following MCP servers configured:
 
 ## Installation
 
-### As a project plugin
-
-Copy the `frontend-pipeline` directory into your project's `.claude/plugins/` directory:
+### From marketplace (recommended)
 
 ```bash
-cp -r frontend-pipeline /path/to/project/.claude/plugins/
+# 1. Add the marketplace
+/plugin marketplace add dotCreativeAgency/claude-plugins
+
+# 2. Install the plugin
+/plugin install frontend-pipeline@dotcreativeagency-plugins
 ```
 
-### Testing locally
+You can choose the installation scope:
+- **User** (default): available in all your projects
+- **Project**: shared with the team via `.claude/settings.json`
+- **Local**: personal, gitignored via `.claude/settings.local.json`
+
+### Manual installation
 
 ```bash
+# Clone and point Claude Code to the plugin directory
+git clone https://github.com/dotCreativeAgency/frontend-pipeline.git
 claude --plugin-dir /path/to/frontend-pipeline
 ```
 
